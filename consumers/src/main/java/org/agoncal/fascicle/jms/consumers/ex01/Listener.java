@@ -1,4 +1,4 @@
-package org.agoncal.fascicle.jms.producers.ex01;
+package org.agoncal.fascicle.jms.consumers.ex01;
 
 import javax.jms.*;
 import javax.naming.Context;
@@ -10,11 +10,8 @@ import javax.naming.NamingException;
  * http://www.antoniogoncalves.org
  * --
  */
+// tag::adocsnippet[]
 public class Listener implements MessageListener {
-
-  // ======================================
-  // =           Public Methods           =
-  // ======================================
 
   public static void main(String[] args) {
 
@@ -25,8 +22,6 @@ public class Listener implements MessageListener {
       // Looks up the administered objects
       ConnectionFactory connectionFactory = (ConnectionFactory) jndiContext.lookup("jms/fascicle/ConnectionFactory");
       Destination queue = (Destination) jndiContext.lookup("jms/fascicle/Queue");
-
-      System.out.println("\nStarting listener....");
 
       try (JMSContext context = connectionFactory.createContext()) {
         context.createConsumer(queue).setMessageListener(new Listener());
@@ -45,3 +40,4 @@ public class Listener implements MessageListener {
     }
   }
 }
+// end::adocsnippet[]

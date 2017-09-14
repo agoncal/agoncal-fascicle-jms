@@ -10,6 +10,7 @@
 
   <modules>
     <module>apis</module>
+    <module>consumers</module>
     <module>getting-started</module>
     <module>producers</module>
     <module>putting-together</module>
