@@ -9,6 +9,7 @@
   <name>JMS</name>
 
   <modules>
+    <module>apis</module>
     <module>getting-started</module>
     <module>putting-together</module>
     <module>understanding</module>
@@ -17,8 +18,7 @@
   <properties>
     <version.java>1.8</version.java>
     <!-- JMS -->
-    <version.json-api>1.1</version.json-api>
-    <version.json>1.1</version.json>
+    <version.jms-api>2.0.1</version.jms-api>
     <!-- Test -->
     <version.junit>5.0.0</version.junit>
     <!-- Maven Plugins -->
@@ -45,16 +45,11 @@
 
   <dependencyManagement>
     <dependencies>
-      <!-- JSON-P -->
+      <!-- JMS -->
       <dependency>
-        <groupId>javax.json</groupId>
-        <artifactId>javax.json-api</artifactId>
-        <version>${version.json-api}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.glassfish</groupId>
-        <artifactId>javax.json</artifactId>
-        <version>${version.json}</version>
+        <groupId>javax.jms</groupId>
+        <artifactId>javax.jms-api</artifactId>
+        <version>${version.jms-api}</version>
       </dependency>
 
       <!-- Test -->
