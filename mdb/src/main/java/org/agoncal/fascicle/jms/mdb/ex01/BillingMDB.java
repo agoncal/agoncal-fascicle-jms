@@ -12,7 +12,7 @@ import javax.jms.MessageListener;
  */
 // tag::adocsnippet[]
 @MessageDriven(mappedName = "jms/fascicle/Topic")
-public class BillingDrivenBean implements MessageListener {
+public class BillingMDB implements MessageListener {
 
   public void onMessage(Message message) {
     try {
