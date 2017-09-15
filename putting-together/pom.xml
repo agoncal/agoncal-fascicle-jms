@@ -18,7 +18,14 @@
   <!-- end::adocskip[] -->
 
   <dependencies>
-    <!-- JMS -->
+    <dependency>
+      <groupId>javax.jms</groupId>
+      <artifactId>javax.jms-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>javax.ejb</groupId>
+      <artifactId>javax.ejb-api</artifactId>
+    </dependency>
 
     <!-- Test -->
     <dependency>
