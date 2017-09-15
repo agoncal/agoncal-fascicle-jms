@@ -7,7 +7,7 @@
   <artifactId>mdb</artifactId>
   <version>2.0</version>
   <packaging>jar</packaging>
-  <name>JMS :: Message Driven Bean</name>
+  <name>JMS :: MDB</name>
 
   <parent>
     <groupId>org.agoncal.fascicle</groupId>
