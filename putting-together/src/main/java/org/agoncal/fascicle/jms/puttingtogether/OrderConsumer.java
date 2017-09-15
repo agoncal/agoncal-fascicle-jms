@@ -21,11 +21,10 @@ public class OrderConsumer {
     Context jndiContext = new InitialContext();
 
     // Looks up the administered objects
-    ConnectionFactory connectionFactory = (ConnectionFactory) jndiContext.lookup("jms/javaee7/ConnectionFactory");
-    Destination topic = (Destination) jndiContext.lookup("jms/javaee7/Topic");
+    ConnectionFactory connectionFactory = (ConnectionFactory) jndiContext.lookup("jms/fascicle/ConnectionFactory");
+    Destination topic = (Destination) jndiContext.lookup("jms/fascicle/Topic");
 
     // Loops to receive the messages
-    System.out.println("\nInfinite loop. Waiting for a message...");
     try (JMSContext jmsContext = connectionFactory.createContext()) {
       while (true) {
         OrderDTO order = jmsContext.createConsumer(topic).receiveBody(OrderDTO.class);
