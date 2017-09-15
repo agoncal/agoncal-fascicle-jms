@@ -57,38 +57,38 @@ import java.lang.annotation.Target;
  * transaction demarcation is used.
  * Its values are <code>Auto_acknowledge</code> or <code>Dups_ok_acknowledge</code>.
  * If this property is not specified, JMS <code>AUTO_ACKNOWLEDGE</code> semantics are assumed.
- *
+ * <p>
  * <li> <code>messageSelector</code>.  This property is used to specify
  * the JMS message selector to be used in determining which messages a
  * JMS message driven bean is to receive.
- *
+ * <p>
  * <li> <code>destinationType</code>.  This property is used to specify
  * whether the message driven bean is intended to be used with a queue or
  * a topic.  The value must be either <code>javax.jms.Queue</code> or
  * <code>javax.jms.Topic</code>.
- *
+ * <p>
  * <li> <code>destinationLookup</code>.  This property is used to specify
  * the JMS queue or topic from which a JMS message-driven bean is to receive messages.
- *
+ * <p>
  * <li> <code>connectionFactoryLookup</code>.  This property is used to specify
  * the JMS connection factory that will be used to connect to the JMS provider
  * from which a JMS message-driven bean is to receive messages.
- *
+ * <p>
  * <li> <code>subscriptionDurability</code>.  If the message driven bean is
  * intended to be used with a topic, this property may be used to indicate
  * whether a durable or non-durable subscription should be used.   The
  * value of this property must be either <code>Durable</code> or <code>NonDurable</code>
- *
+ * <p>
  * <li> <code>subscriptionName</code>.  This property is used to specify
  * the name of the durable subscription if the message-driven bean is intended
  * to be used with a Topic, and the bean provider has indicated that a durable
  * subscription should be used.
- *
+ * <p>
  * <li> <code>clientId</code>.  This property is used to specify
  * the JMS client identifier that will be used when connecting to the JMS provider
  * from which a JMS message-driven bean is to receive messages.
  * If this property is not specified then the client identifier will be left unset.
- *
+ * <p>
  * </ul>
  *
  * @since EJB 3.0
@@ -97,7 +97,8 @@ import java.lang.annotation.Target;
 @Target({})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ActivationConfigProperty {
-    String propertyName();
-    String propertyValue();
+  String propertyName();
+
+  String propertyValue();
 }
 // end::adocsnippet[]

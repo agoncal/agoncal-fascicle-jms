@@ -9,13 +9,13 @@ import java.util.Date;
 
 /**
  * @author Antonio Goncalves
- *         http://www.antoniogoncalves.org
- *         --
+ * http://www.antoniogoncalves.org
+ * --
  */
 // tag::adocsnippet[]
 @MessageDriven(mappedName = "jms/fascicle/Topic", activationConfig = {
-        @ActivationConfigProperty(propertyName = "acknowledgeMode", propertyValue = "Auto-acknowledge"),
-        @ActivationConfigProperty(propertyName = "messageSelector", propertyValue = "orderAmount BETWEEN 3 AND 7")
+  @ActivationConfigProperty(propertyName = "acknowledgeMode", propertyValue = "Auto-acknowledge"),
+  @ActivationConfigProperty(propertyName = "messageSelector", propertyValue = "orderAmount BETWEEN 3 AND 7")
 })
 public class BillingMDB implements MessageListener {
 

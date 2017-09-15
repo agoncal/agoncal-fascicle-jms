@@ -55,7 +55,6 @@ import java.lang.annotation.Target;
  * <code>messageListenerInterface</code> element of this annotation.
  *
  * @see ActivationConfigProperty
- *
  * @since EJB 3.0
  */
 // tag::adocsnippet[]
@@ -63,15 +62,15 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface MessageDriven {
 
-    String name() default "";
+  String name() default "";
 
-    Class messageListenerInterface() default Object.class;
+  Class messageListenerInterface() default Object.class;
 
-    ActivationConfigProperty[] activationConfig() default {};
+  ActivationConfigProperty[] activationConfig() default {};
 
-    String mappedName() default "";
+  String mappedName() default "";
 
-    String description() default "";
+  String description() default "";
 }
 // end::adocsnippet[]
 

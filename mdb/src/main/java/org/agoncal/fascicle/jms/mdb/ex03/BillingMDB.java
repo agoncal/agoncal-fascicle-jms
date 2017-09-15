@@ -10,19 +10,20 @@ import javax.jms.MessageListener;
 
 /**
  * @author Antonio Goncalves
- *         http://www.antoniogoncalves.org
- *         --
+ * http://www.antoniogoncalves.org
+ * --
  */
 // tag::adocsnippet[]
 @MessageDriven(mappedName = "jms/javaee6/Topic", activationConfig = {
-        @ActivationConfigProperty(propertyName = "acknowledgeMode", propertyValue = "Auto-acknowledge"),
-        @ActivationConfigProperty(propertyName = "messageSelector", propertyValue = "orderAmount < 3000")
+  @ActivationConfigProperty(propertyName = "acknowledgeMode", propertyValue = "Auto-acknowledge"),
+  @ActivationConfigProperty(propertyName = "messageSelector", propertyValue = "orderAmount < 3000")
 })
 public class BillingMDB implements MessageListener {
 
   // tag::adocskip[]
   @Resource
   private MessageDrivenContext context;
+
   // end::adocskip[]
   public void onMessage(Message message) {
     try {
