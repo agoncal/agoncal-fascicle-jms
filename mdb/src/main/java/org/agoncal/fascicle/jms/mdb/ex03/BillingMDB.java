@@ -14,7 +14,7 @@ import javax.jms.MessageListener;
  * --
  */
 // tag::adocsnippet[]
-@MessageDriven(mappedName = "jms/javaee6/Topic", activationConfig = {
+@MessageDriven(mappedName = "jms/fascicle/Topic", activationConfig = {
   @ActivationConfigProperty(propertyName = "acknowledgeMode", propertyValue = "Auto-acknowledge"),
   @ActivationConfigProperty(propertyName = "messageSelector", propertyValue = "orderAmount < 3000")
 })

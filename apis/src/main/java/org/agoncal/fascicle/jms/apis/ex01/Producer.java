@@ -32,15 +32,12 @@ public class Producer {
       // Sends a text message to the queue
       TextMessage message = session.createTextMessage("JMS 1.1 - This is a text message sent at " + new Date());
       producer.send(message);
-      System.out.println("\nMessage sent !");
 
       connection.close();
 
     } catch (NamingException | JMSException e) {
       e.printStackTrace();
     }
-
-    System.exit(0);
   }
 }
 // end::adocsnippet[]

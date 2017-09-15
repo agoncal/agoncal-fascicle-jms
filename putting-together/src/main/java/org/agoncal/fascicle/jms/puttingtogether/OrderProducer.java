@@ -17,13 +17,14 @@ import java.util.Date;
 public class OrderProducer {
 
   public static void main(String[] args) throws NamingException {
-
+    // tag::adocskip[]
     if (args.length != 1) {
       System.out.println("usage : enter an amount");
       System.exit(0);
     }
 
     System.out.println("Sending message with amount = " + args[0]);
+    // end::adocskip[]
 
     // Creates an orderDto with a total amount parameter
     Float totalAmount = Float.valueOf(args[0]);
@@ -39,7 +40,6 @@ public class OrderProducer {
     try (JMSContext jmsContext = connectionFactory.createContext()) {
       // Sends an object message to the topic
       jmsContext.createProducer().setProperty("orderAmount", totalAmount).send(topic, order);
-      System.out.println("\nOrder sent : " + order.toString());
     }
   }
 }

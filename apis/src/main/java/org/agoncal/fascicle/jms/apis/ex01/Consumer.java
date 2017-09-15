@@ -30,7 +30,6 @@ public class Consumer {
       connection.start();
 
       // Loops to receive the messages
-      System.out.println("\nInfinite loop. Waiting for a message...");
       while (true) {
         TextMessage message = (TextMessage) consumer.receive();
         System.out.println("Message received: " + message.getText());
